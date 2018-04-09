@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 选择器</title>
+    <style type="text/css">
+        div ,p {
+            font-size: 20px;
+            color:blue;
+        }
+
+        p:hover{
+            color:red;
+        }
+
+        #box{
+            color: pink;
+        }
+
+        .yahei{
+            font-family: "Microsoft Yahei";
+        }
+
+        /*.ident{*/
+            /*text-indent: 40px;*/
+        /*}*/
+
+
+        .list a{
+
+            text-decoration: none;
+            color: #333;
+        }
+
+        .list a:hover{
+            color: gold;
+            text-decoration: underline;
+        }
+
+        .list li{
+            height:30px;
+        }
+
+        .box1,.box2,.box3,.box4 {
+            font-size: 14px;
+            text-indent: 28px;;
+        }
+
+        .box1{
+            color: red;
+        }
+
+        .box2{
+            color: pink;
+        }
+
+        .box3{
+
+            color: gold;
+        }
+
+
+        .box1:before{
+            content: "在前面的文字";
+            color: blue;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="yahei ident">这是一个div元素</div>
+    <div id="box" class="yahei">这是第二div元素</div>
+    <div class="yahei">这是第三个div元素</div>
+
+
+    <p>这个是一段文字 这是一段文字 这是一段文字</p>
+
+    <ul class="list">
+        <li> <a href="">新闻标题</a></li>
+        <li> <a href="">新闻标题</a></li>
+        <li> <a href="">新闻标题</a></li>
+        <li> <a href="">新闻标题</a></li>
+        <li> <a href="">新闻标题</a></li>
+    </ul>
+
+    <div class="box1">文字001</div>
+    <div class="box2">文字002</div>
+    <div class="box3">文字003</div>
+    <div class="box4">文字004</div>
+
+</body>
+</html>
