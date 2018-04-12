@@ -1,0 +1,22 @@
+
+body {
+
+    background-color: #ddd;
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    float: left;
+    margin: 20px  auto 0;
+}
+
+
+.box2 {
+    width:200px;
+    height: 200px;
+    background-color: cyan;
+    float: left;
+    margin: 20px  auto 0;
+}

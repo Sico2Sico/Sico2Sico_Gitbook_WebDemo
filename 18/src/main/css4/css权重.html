@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS权重</title>
+
+    <style type="text/css">
+
+        #body1 .con {
+            color: green;
+        }
+
+        body .con2{
+            color: greenyellow;
+        }
+
+
+        li{
+            background-color: gold;
+            margin-bottom: 10px;
+        }
+
+
+        li:nth-of-type(2n+1){
+            background-color: green;
+        }
+
+
+        .box div {
+            background-color: gold;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            background-color: red;
+        }
+
+        /*.box div {*/
+            /**/
+            /*background-color: gold;*/
+            /*margin-bottom: 10px;*/
+        /*}*/
+
+
+    </style>
+
+
+</head>
+<body id="body1">
+    <div class="con con2" >这是一个div元素</div>
+
+    <h3>ul 容器</h3>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+    <h3>div 容器</h3>
+
+    <ul class="box">
+        <div>1</div>
+        <div>2</div>
+        <p>P标签</p>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </ul>
+
+</body>
+</html>

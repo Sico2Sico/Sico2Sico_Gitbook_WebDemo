@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素旋转1</title>
+
+    <style type="text/css">
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 50px auto 0;
+            background-color: gold;
+            transition: all 500ms ease;
+
+            transform-style: preserve-3d;
+            transform: perspective(800px) rotateX(0deg);
+        }
+
+
+        .box:hover {
+
+            transform: perspective(800px) rotateX(-30deg);;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

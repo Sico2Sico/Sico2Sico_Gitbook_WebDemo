@@ -1,0 +1,23 @@
+body {
+    background-color: gold;
+}
+
+
+.box1 {
+
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    float: left;
+    margin: 20px;
+}
+
+
+ .box2 {
+
+     width: 200px;
+     height: 200px;
+     background-color: pink;
+     float:left;
+     margin: 20px;
+ }

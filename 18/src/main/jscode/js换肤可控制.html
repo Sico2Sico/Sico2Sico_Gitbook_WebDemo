@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="1.css" id="link1">
+    <title>js换肤可控制</title>
+
+    <script type="text/javascript">
+
+        window.onload = function() {
+
+            var btn1 = document.getElementById('btn1');
+            var btn2 = document.getElementById('btn2');
+
+            btn1.onclick = click2;
+            btn2.onclick = click1;
+
+        }
+
+
+        function click1(){
+            var onlink = document.getElementById('link1');
+            onlink.href = '1.css';
+        }
+
+        function  click2(){
+            var onlink = document.getElementById('link1');
+            onlink.href = '2.css';
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+    <input type="button" name="" value="皮肤1" id="btn1">
+    <input type="button" name="" value="皮肤2" id="btn2">
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+</html>

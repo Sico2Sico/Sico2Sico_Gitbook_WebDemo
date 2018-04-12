@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>css权重2</title>
+
+    <style type="text/css">
+
+        li:nth-child(1){
+            background-color: green;
+        }
+
+        li:nth-last-child(1){
+            background-color: gold;
+        }
+
+
+        .box p:nth-child(1){
+            background-color: gold;
+        }
+
+        .box p:only-of-type{
+            background-color: pink;
+        }
+
+        div :empty {
+            background-color: red;
+            height:23px;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+     <ul>
+         <li>1</li>
+         <li>2</li>
+         <li>3</li>
+         <li>4</li>
+         <li>5</li>
+         <li>6</li>
+         <li>7</li>
+         <li>8</li>
+         <li>9</li>
+     </ul>
+
+    <div class="box">
+
+        <p>这个是一个p元素</p>
+        <div>这是一个块元素</div>
+        <p></p>这是第二个p原属</p>
+
+    </div>
+
+    <div></div>
+    <div></div>
+
+
+
+</body>
+</html>
