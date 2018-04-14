@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js封闭函数</title>
+
+    <script type="text/javascript">
+
+//        (function (){
+//            var str = "欢迎访问wide主页";
+//            alert(str);
+//        })()
+
+//
+//        !function(){
+//            var str = "逗逼年年有 今年特别多";
+//            alert(str);
+//        }()
+
+
+//        ~function(){
+//            var str = "逗逼年年有 今年特别多";
+//            alert(str);
+//        }()
+
+
+//        var  time = function () {
+//
+//            alert("哈啊哈")
+//        }
+//
+//
+//        time();
+
+
+        var cc = (function (b) {
+
+            function bb () {
+                return b;
+            }
+//            返回闭包函数块
+            return bb;
+        })(23);
+
+
+        var  bb = (function () {
+            function kk (a) {
+                alert("传递的值为"+a);
+            }
+            return kk;
+        })();
+
+
+         bb(23);
+
+
+//        alert("121313");
+//
+//        cc();
+
+    </script>
+
+
+</head>
+<body>
+
+
+</body>
+</html>

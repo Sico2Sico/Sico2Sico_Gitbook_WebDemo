@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js时钟</title>
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            var time = document.getElementById('time');
+
+
+            function timefunc() {
+
+                var  now  = new Date();
+                var  year = now.getFullYear();
+                var  month = now.getMonth()+1;
+                var  date = now.getDate();
+                var  weak = now.getDay();
+
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                var second = now.getSeconds();
+
+                time.innerHTML = "当前时间是:"+year+"年"+todou(month)+"月"+todou(date)+"日"+" "+towweak(weak)+" "+todou(hour)+":"+todou(minute)+":"+todou(second);
+            }
+
+
+            timefunc();
+
+            setInterval(timefunc,1000);
+
+        }
+
+
+        function towweak(num){
+
+            switch (num){
+
+                case 0:
+                    return "星期天";
+                case 1:
+                    return "星期一";
+                case 2:
+                    return "星期二";
+                case 3:
+                    return "星期三";
+                case 4:
+                    return "星期四";
+                case 5:
+                    return "星期五";
+                case 6:
+                    return "星期六";
+            }
+        }
+
+        function  todou(num){
+
+            if (num < 10) {
+                return "0"+num;
+            }else {
+                return num;
+            }
+        }
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <div id="time"></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>return函数</title>
+
+    <script type="text/javascript">
+
+        window.onload = function() {
+
+            var input1 = document.getElementById('input1');
+            var input2 = document.getElementById('input2');
+
+            var btn = document.getElementById('btn')
+
+
+
+            btn.onclick = function() {
+
+                var in1 = input1.value;
+                var in2 = input2.value;
+
+                var s = add(in1,in2);
+
+                alert(s);
+
+            }
+
+
+            function add(a,b){
+
+                var c = parseInt(a) + parseInt(b);
+                return c;
+
+            }
+
+
+
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+    <input type="text" name="" id="input1">
+    <input type="text" name="" id="input2">
+
+    <input type="button" name="" value="相加" id="btn">
+
+</body>
+</html>

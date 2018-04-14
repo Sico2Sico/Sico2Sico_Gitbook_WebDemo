@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js定时动画</title>
+
+    <style type="text/css">
+
+        .box{
+            width:20px;
+            height:20px;
+            left: 20px;
+            top: 30px;
+            position: fixed;
+            background-color: red;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            var left = 20;
+            var box = document.getElementById('box');
+
+            var time = setInterval(function () {
+                left+=2;
+                box.style.left = left+'px';
+
+                if (left > 500){
+                    clearTimeout(time);
+                }
+            },30)
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <div class="box" id="box"></div>
+</body>
+</html>
