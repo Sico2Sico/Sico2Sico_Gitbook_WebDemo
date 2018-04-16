@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js封闭函数</title>
+
+    <script type="text/javascript">
+
+
+        <!--js的分号需要注意 js需要注意分号 不然运行不过 会报错误 不执行-->
+        var aa = function () {
+            alert("我是外部 AA");
+        };
+
+
+
+        (function () {
+               var aa = function () {
+                   alert("我是内部AA");
+               }
+               aa();
+        })();
+
+
+        aa();
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

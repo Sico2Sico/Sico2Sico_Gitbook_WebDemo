@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js新增选择器</title>
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            var odiv = document.querySelector('#box');
+
+            odiv.innerHTML = "一修改的数据";
+
+
+            var alis = document.querySelectorAll('.list li');
+            alert(alis.length);
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    <div id="box" >这是一个div选择器</div>
+
+    <ul class="list">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+
+    </ul>
+
+</body>
+</html>

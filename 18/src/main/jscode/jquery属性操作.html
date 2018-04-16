@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery属性操作</title>
+
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+//            $('.box').html('<a href="https:www.baidu.com">百度网</a>')
+//
+//
+//            $('#check').prop({checked:true});
+//
+//            alert($('.box2').text());
+
+
+            $('#btn').click(
+                function () {
+                    $('.box').slideToggle();
+                }
+            );
+
+        })
+
+
+    </script>
+
+
+    <style type="text/css">
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <input type="button" name=""  value="效果" id="btn">
+
+    <div class="box">这是一个div元素</div>
+
+    <!--<input type="checkbox" name="" id="check">多选-->
+
+
+    <!--<div class="box2"><span>这是div元素的内部span</span> </div>-->
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js构造函数</title>
+
+    <script type="text/javascript">
+
+        function  Preson(naem,age,job) {
+
+            this.name = name;
+            this.age = age;
+            this.job = job;
+        }
+
+
+        Preson.prototype.showname= function() {
+            alert(this.name);
+        }
+
+        Preson.prototype.showAge= function () {
+            alert(this.age);
+        }
+
+
+        Preson.prototype.showJob = function () {
+            alert(this.job);
+        }
+
+        var  tom = new Preson("dezhi",27,"engineer");
+
+        tom.showJob();
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

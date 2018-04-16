@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级菜单</title>
+
+
+
+    <style type="text/css">
+
+        body{
+            font-family: 'Microsoft Yahei';
+        }
+
+        body,ul{
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        ul{
+            list-style: none;
+        }
+
+        .meun{
+
+            width:200px;
+            margin: 20px auto 0;
+        }
+
+        .meun .level1,.meun li ul a{
+
+            display: block;
+            width:200px;
+            height: 30px;
+            line-height: 30px;
+            text-decoration: none;
+            background-color: #3366cc;
+            color: #fff;
+            font-size: 16px;
+            text-indent: 16px;
+        }
+
+        .meun .level1{
+            border-bottom: 1px solid #afc6cf;
+        }
+
+
+        .meun li ul a{
+            font-size: 14px;
+            text-indent: 20px;
+            background-color: #7aa1ef;
+        }
+
+
+        .meun li ul li{
+            border-bottom: 1px solid #afc6f6;
+        }
+
+        .meun li ul{
+            display: none;
+        }
+
+
+        .meun li ul.current{
+            display: block;
+        }
+
+        .meun li ul li a:hover{
+            background-color:greenyellow;
+        }
+    </style>
+
+
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+
+    <script type="text/javascript">
+
+
+        $(function(){
+
+            $('.level1').click(
+                function(){
+                    $(this).next().slideDown().parent().siblings().children('ul').slideUp();
+                });
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+    <ul class="meun">
+
+       <li>
+            <a href="#" class="level1">水果</a>
+            <ul class="current">
+                <li><a href="">苹果</a></li>
+                <li><a href="">栗子</a></li>
+                <li><a href="">葡萄</a></li>
+                <li><a href="">火龙果</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="level1">海鲜</a>
+            <ul class>
+                <li><a href="">蛏子</a></li>
+                <li><a href="">扇贝</a></li>
+                <li><a href="">龙虾</a></li>
+                <li><a href="">象波鞋</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="level1">肉类</a>
+            <ul >
+                <li><a href="">牛肉</a></li>
+                <li><a href="">羊肉</a></li>
+                <li><a href="">猪肉</a></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="#" class="level1">蔬菜</a>
+            <ul >
+                <li><a href="">娃娃菜</a></li>
+                <li><a href="">西红市</a></li>
+                <li><a href="">西芹</a></li>
+                <li><a href="">胡萝卜</a></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="#" class="level1">速冻</a>
+            <ul >
+                <li><a href="">冰淇淋</a></li>
+                <li><a href="">湾仔码头</a></li>
+                <li><a href="">海参</a></li>
+                <li><a href="">牛肉丸</a></li>
+            </ul>
+        </li>
+
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js类的继承</title>
+
+    <script type="text/javascript">
+
+        function Fclass(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        Fclass.prototype.showname = function() {
+            alert(this.name);
+        }
+
+        Fclass.prototype.showage = function () {
+            alert(this.age);
+        }
+
+
+        function  Sclass (name,age,job){
+            Fclass.call(this,name,age);
+            this.job = job;
+        }
+
+        Sclass.prototype = new Fclass();
+
+        Sclass.prototype.showjob = function () {
+            alert(this.job);
+        }
+        var  tom = new Sclass("dezhi",23,"engineer");
+
+        tom.showjob();
+        tom.showname();
+        tom.showage();
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

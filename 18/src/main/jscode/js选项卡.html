@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js选项卡</title>
+
+    <style type="text/css">
+
+        .btns {
+            width:500px;
+            height:50px;
+        }
+
+
+        .btns input {
+            width:100px;
+            height:50px;
+            background-color: #ddd;
+            color: #666;
+            border: 1px solid red;
+        }
+
+        .btns input.cur {
+            background-color: chartreuse;
+        }
+
+        .contents div {
+            width:500px;
+            height: 300px;
+            background-color: gold;
+            display: none;
+            line-height:300px;
+            text-align: center;
+        }
+
+        .contents div.active {
+            display: block;
+        }
+
+    </style>
+
+
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            var abtn= document.getElementById('btns').getElementsByTagName('input');
+            var acon = document.getElementById('contents').getElementsByTagName('div');
+
+            for (var i = 0; i < abtn.length; i++) {
+
+                (function(i) {
+
+                    abtn[i].onclick = function () {
+
+                        for (var j=0;j<abtn.length;j++){
+                            abtn[j].className = '';
+                            acon[j].className = '';
+                        }
+
+                       this.className = "cur";
+                        acon[i].className = 'active';
+                    }
+
+                })(i);
+            }
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+
+    <div class="btns" id="btns">
+        <input type="button" value="选项一" name="" class="cur">
+        <input type="button" value="选项二" name="">
+        <input type="button" value="选项三" name="">
+    </div>
+
+    <div class="contents" id="contents">
+        <div class="active">文字内容一</div>
+        <div >文字内容二</div>
+        <div >文字内容三</div>
+    </div>
+
+
+</body>
+</html>

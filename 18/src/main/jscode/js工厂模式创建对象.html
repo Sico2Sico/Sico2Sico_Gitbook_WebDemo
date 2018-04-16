@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js工厂模式创建对象</title>
+
+
+    <script type="text/javascript">
+
+        function Person(name,age,job){
+
+            var person = new Object();
+            person.name = name;
+            person.age = age;
+            person.job = job;
+
+            person.showname = function(){
+                alert(this.name);
+            }
+
+            person.showAge = function(){
+                alert(this.age);
+            }
+
+            person.showJob = function() {
+                alert(this.job);
+            }
+            return person;
+        }
+
+
+
+
+        var tom = Person("得知",18,'engineer');
+        var jack = Person("jack",23,"worker'");
+
+        tom.showJob();
+        jack.showJob();
+
+
+
+
+
+        alert(tom.name === jack.name);
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

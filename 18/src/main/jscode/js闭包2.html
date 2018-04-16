@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js闭包2</title>
+
+    <script type="text/javascript">
+        var  cc = (
+            function(n){
+                function bb(){
+                    return n+1;
+                }
+                return bb;
+            }
+        )(10);
+        alert(cc());
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
