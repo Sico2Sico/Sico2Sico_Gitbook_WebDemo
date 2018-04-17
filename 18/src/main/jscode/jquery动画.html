@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery动画</title>
+
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+
+
+        $(function () {
+
+            $('#div1').animate({width:'200px',height:'200px'},1000, function () {
+                alert("动画玩了");
+                $(this).animate({marginLeft:'500px'},10000, function () {
+                    alert("回到顶部啊");
+                    $(this).animate({marginTop:'500px'},10000);
+                });
+            });
+
+        })
+
+
+    </script>
+
+    <style type="text/css">
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div id="div1" class="box"></div>
+</body>
+</html>

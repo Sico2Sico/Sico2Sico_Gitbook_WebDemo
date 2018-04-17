@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery自定义绑定事件</title>
+
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $('#btn1').bind('hello', function () {
+                alert("hello");
+            });
+
+
+            $('#btn1').bind('click', function () {
+                alert('click');
+            });
+
+
+            $('#btn2').click(function () {
+                $('#btn1').trigger('hello');
+                $('#btn1').trigger('click');
+            });
+
+        })
+
+
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <input type="button" name="" value="btn1" id="btn1">
+    <input type="button" name="" value="btn2" id="btn2">
+
+</body>
+</html>
