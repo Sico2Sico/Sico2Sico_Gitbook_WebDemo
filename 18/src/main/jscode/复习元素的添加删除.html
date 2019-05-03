@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>熟悉原属的添加和删除</title>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('.addBtn').click(function () {
+                var content = $('.addText').val();
+                var addli = $('<li>'+content+'<span class="del">删除</span></li>');
+                addli.appendTo($('.lists'));
+            })
+
+            $('.lists').delegate('li span','click', function () {
+                 if($(this).attr('class') == 'del'){
+                     $(this).parent().remove();
+                     return;
+                 }
+
+                $(this).css({color:'#fff',fontSize:'20px'});
+            })
+
+        })
+
+    </script>
+
+    <style type="text/css">
+        ul{
+            list-style: none;
+            background-color: #3D7FBB;
+        }
+
+        li{
+            height: 30px;
+            background-color: greenyellow;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <input type="text" name="" placeholder="输入你需要泰纳的内容" id="addText" class="addText">
+    <input type="button" name="" value="添加" id="addBtn" class="addBtn">
+
+    <ul class="lists">
+        <li>1 <span class="del">删除</span></li>
+        <li>2 <span class="del">删除</span></li>
+        <li>3 <span class="del">删除</span></li>
+        <li>4 <span class="del">删除</span></li>
+        <li>5 <span class="del">删除</span></li>
+        <li>6 <span class="del">删除</span></li>
+    </ul>
+
+
+
+</body>
+</html>

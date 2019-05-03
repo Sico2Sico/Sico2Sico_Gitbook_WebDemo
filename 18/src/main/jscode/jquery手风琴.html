@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery手风情</title>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('#accordion li').click(function() {
+
+                alert("hah");
+                $(this).animate({left:$(this).index()*30});
+
+                $(this).prevAll().each(function(){
+
+                    $(this).animate({left:$(this).index()*21});
+
+                });
+
+                $(this).nextAll().each(function(){
+
+                    $(this).animate({left:(727-(5-$(this).index())*21)});
+                });
+
+
+            });
+
+        })
+    </script>
+
+    <style type="text/css">
+
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        body{
+            font-size:12px;
+        }
+
+        #accordion lu li{
+            display: block;
+            list-style: none;
+            width: 643px;
+            height: 350px;
+            position: absolute;
+            background: #FFF;
+        }
+
+        #accordion lu li span{
+            padding-top: 10px;
+            display: block;
+            width: 15px;
+            height: 350px;
+            float: left;
+            text-align: center;
+            color: #FFF;
+        }
+
+        #accordion{
+            background-color: red;
+            width: 727px;
+            height: 350px;
+            margin: 100px auto 0 auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #CCC;
+        }
+
+        .bar1{left: 0px;}
+        .bar2{left: 643px;}
+        .bar3{left: 664px;}
+        .bar4{left: 685px;}
+        .bar5{left: 706px;}
+
+        .bar1 span{background:#09E0B5;}
+        .bar2 span{background:#3D7FBB;}
+        .bar3 span{background:#5CA716;}
+        .bar4 span{background:#F28B24;}
+        .bar5 span{background:#7C0070;}
+
+    </style>
+
+</head>
+<body>
+    <div id="accordion">
+        <lu >
+            <li class="bar1"><span>非洲景色01</span><img src="001.jpg"></li>
+            <li class="bar2"><span>非洲景色02</span><img src="002.jpg"></li>
+            <li class="bar3"><span>非洲景色03</span><img src="003.jpg"></li>
+            <li class="bar4"><span>非洲景色04</span><img src="004.jpg"></li>
+            <li class="bar5"><span>非洲景色05</span><img src="005.jpg"></li>
+        </lu>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todolist</title>
+
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('.add').click(function () {
+
+                var text = $('.inputtext').val();
+
+                if(text == ''){
+                    alert("请输入内容");
+                    return;
+                };
+
+                li = $('<li><span>'+text+'</span><a href="javascript:;" class="up"> ↑ </a> <a href="javascript:;" class="down"> ↓ </a> <a href="javascript:;" class="del">删除</a></li>');
+                li.appendTo('.list');
+            })
+
+            $('.list').delegate('a','click', function () {
+                var handle = $(this).attr('class');
+
+                switch (handle){
+
+                    case 'del':
+                            alert("del");
+                            $(this).parent().remove();
+                        break;
+
+                    case 'up':
+                            alert("up");
+                            if($(this).parents().prev().length ==0){
+                                alert("到顶了");
+                                return;
+                            }
+                            $(this).parent().insertBefore($(this).prepend().prev());
+                        break;
+
+                    case 'down':
+                        alert("down");
+
+                        if($(this).parents().next().length ==0){
+                            alert("到顶了");
+                            return;
+                        }
+
+                        $(this).parent().insertAfter($(this).prepend().next());
+                        break;
+                }
+
+            });
+
+        })
+
+    </script>
+
+    <style type="text/css">
+        .list_con{
+            width:400px;
+            margin: 50px auto 0;
+        }
+
+
+        .inputtext{
+            width: 350px;
+            height: 30px;
+            border: 1px solid #ccc;
+            padding:0px;
+            text-align: center;
+        }
+
+        .add{
+            width:40px;
+            height:30px;
+            padding: 0px;
+            border: 1px  solid #ccc;
+        }
+
+
+        .list{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .list li{
+
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .list li span{
+            float: left;
+        }
+
+        .list li a{
+            float: right;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="list_con">
+        <h2> to do list</h2>
+        <input type="text" name="" id="text" class="inputtext">
+        <input type="button" name="" value="增加" class="add">
+
+        <br>
+
+        <ul id="list" class="list">
+            <li>
+                <span>学习html</span>
+                <a href="javascript:;" class="up"> ↑ </a>
+                <a href="javascript:;" class="down"> ↓ </a>
+                <a href="javascript:;" class="del"> 删除 </a>
+            </li>
+
+            <li>
+                <span>学习jquery</span>
+                <a href="javascript:;" class="up"> ↑ </a>
+                <a href="javascript:;" class="down"> ↓ </a>
+                <a href="javascript:;" class="del"> 删除 </a>
+            </li>
+
+            <li>
+                <span>学习css</span>
+                <a href="javascript:;" class="up"> ↑ </a>
+                <a href="javascript:;" class="down"> ↓ </a>
+                <a href="javascript:;" class="del"> 删除 </a>
+            </li>
+
+
+        </ul>
+
+    </div>
+
+</body>
+</html>
